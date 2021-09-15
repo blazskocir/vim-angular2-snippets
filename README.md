@@ -5,26 +5,32 @@ Port of [John Papa's VSCode Snippets](https://github.com/johnpapa/vscode-angular
 ### TypeScript Snippets
 
 ```typescript
+
+ngcomp              // Component
+ngpipe              // Pipe
+ng2-route-config    // @RouteConfig
+ng2-route-path      // Routing path
+ngserv              // Service
+ngservr             // Service with providedIn: 'root'
+ngsubs              // Observable subscription
+nghttpg             // Http get call
+nghttpp             // Http post call
 ng2-component-root  // Angular 2 root App component
-ng2-bootstrap     // Angular 2 bootstraping, for main.ts
-ng2-component     // Angular 2 component
-ng2-pipe          // Angular 2 pipe
-ng2-route-config  // Angular 2 @RouteConfig
-ng2-route-path    // Angular 2 routing path
-ng2-service       // Angular 2 service
-ng2-subscribe     // Angular 2 observable subscription
+ng2-bootstrap       // Angular 2 bootstraping, for main.ts
 ```
 
 ### HTML Snippets
 
 ```html
-ng2-ngClass
-ng2-ngFor
-ng2-ngIf
-ng2-ngModel
-ng2-routerLink
-ng2-ngStyle
-ng2-ngSwitch
+ngclass
+ngfor
+ngfora     // async
+ngif
+ngifa      // async as data
+ngmodel
+routerlink
+ngstyle
+ngswitch
 ```
 
 ### Installation
