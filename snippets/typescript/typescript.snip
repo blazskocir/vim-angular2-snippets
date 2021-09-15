@@ -1,8 +1,7 @@
-snippet ng2-component
+snippet ngcomp
   import { Component, OnInit } from '@angular/core';
 
   @Component({
-    moduleId: module.id,
     selector: '${1:#:selector}',
     templateUrl: '${2:#:name}.component.html'
   })
@@ -13,7 +12,9 @@ snippet ng2-component
     ${0}
   }
 
-snippet ng2-service
+
+
+snippet ngserv
   import { Injectable } from '@angular/core';
 
   @Injectable()
@@ -23,36 +24,70 @@ snippet ng2-service
 
   }
 
-snippet ng2-pipe
+
+
+snippet ngservr
+  import { Injectable } from '@angular/core';
+
+  @Injectable({
+    providedIn: 'root'
+  })
+  export class ${1:#:ServiceName}Service {
+    ${0}
+    constructor() { }
+
+  }
+
+
+
+snippet ngpipe
   import { Pipe, PipeTransform } from '@angular/core';
 
   @Pipe({
-    name: '${name}'
+    name: '${1:#:name}'
   })
 
-  export class ${1:#:PipeName}Pipe implements PipeTransform {
+  export class ${2:#:PipeName}Pipe implements PipeTransform {
     transform(value: any, args: any[]): any {
       ${0}
     }
   }
+
+
 
 snippet ng2-routes
   @Routes([
     { path: '/${1:#:path}', component: ${2:#:Component} }${0}
   ])
 
+
+
 snippet ng2-route-path
   { path: '/${1:#:path}', component: ${2:#:Component} }${0}
 
 
-snippet ng2-http-get
+
+
+snippet nghttpg
   return this.http.get('${1:#:url}')
   .map((res: Response) => res.json()${0});
 
-snippet ng2-subscribe
+
+
+
+snippet nghttpp
+  return this.http.post('${1:#:url}', ${2:#:data})
+  .map((res: Response) => res.json()${0});
+
+
+
+
+snippet ngsubs
   this.${1:#:service}.${2:#:function}
   .subscribe(${3:#:arg} => this.${4:#:property} = ${5:#:arg});
   ${0}
+
+
 
 snippet ng2-bootstrap
   import { enableProdMode } from '@angular/core';
@@ -66,6 +101,8 @@ snippet ng2-bootstrap
     .then(success => console.log('Bootstrap success'))
     .catch(error => console.log(error));
   ${0}
+
+
 
 snippet ng2-component-root
   import { Component } from '@angular/core';
